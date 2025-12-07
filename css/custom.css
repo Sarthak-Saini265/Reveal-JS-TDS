@@ -1,0 +1,351 @@
+/* Custom Styles for Earnings Presentation */
+
+/* Root Variables */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1e3a8a;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --text-light: #f1f5f9;
+    --text-dark: #1e293b;
+}
+
+/* General Styling */
+.reveal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    text-transform: none;
+    font-weight: 600;
+}
+
+.reveal a {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.reveal a:hover {
+    color: #60a5fa;
+}
+
+/* Metrics Container */
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.metric {
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.metric h3 {
+    font-size: 3em;
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.metric p {
+    margin: 10px 0 5px 0;
+    font-size: 1.1em;
+}
+
+.change {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.change.positive {
+    color: var(--success-color);
+}
+
+.change.negative {
+    color: var(--danger-color);
+}
+
+/* Revenue List Styling */
+.revenue-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.revenue-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.revenue-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.revenue-list li.highlight-blue {
+    background: rgba(59, 130, 246, 0.2);
+    border-left-color: var(--success-color);
+    border-left-width: 8px;
+}
+
+.segment-name {
+    flex: 1;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.segment-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 20px;
+}
+
+.segment-growth {
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Formula Styling */
+.formula-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 30px auto;
+    font-size: 1.8em;
+    max-width: 600px;
+}
+
+.formula-explanation {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.formula-explanation ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.formula-explanation li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Code Block Enhancements */
+.reveal pre {
+    width: 95%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.reveal pre code {
+    max-height: 500px;
+    padding: 25px;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/* Highlight Classes */
+.highlight-success {
+    color: var(--success-color);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.highlight-info {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.note {
+    color: #94a3b8;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Investment Grid */
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.investment-item {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(30, 58, 138, 0.1));
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.investment-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.investment-item h4 {
+    margin: 0 0 15px 0;
+    color: var(--primary-color);
+    font-size: 1.3em;
+}
+
+.investment-item .amount {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--success-color);
+    margin: 10px 0;
+}
+
+.investment-item .description {
+    font-size: 0.9em;
+    color: #cbd5e1;
+    margin: 10px 0 0 0;
+}
+
+.total-investment {
+    margin-top: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 10px;
+}
+
+/* Success List */
+.success-list li {
+    color: var(--success-color);
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 80px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+/* Table Styling (for Markdown tables) */
+.reveal table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.reveal table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.reveal table td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reveal table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Fragment Animations */
+.reveal .fragment.highlight-blue {
+    opacity: 1;
+    visibility: inherit;
+}
+
+.reveal .fragment.highlight-blue.visible {
+    background: rgba(59, 130, 246, 0.3);
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .metrics-container,
+    .investment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric h3 {
+        font-size: 2em;
+    }
+    
+    .revenue-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .segment-value,
+    .segment-growth {
+        margin: 5px 0;
+    }
+}
+
+/* Print Styles for PDF Export */
+@media print {
+    .reveal .slides section {
+        page-break-after: always;
+    }
+    
+    .reveal pre code {
+        max-height: none;
+    }
+}
+
+/* Custom Fragment Fade-Up Animation */
+.reveal .slides section .fragment.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.reveal .slides section .fragment.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth transitions for updating metrics */
+.metric.updating {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Speaker notes button styling */
+.reveal .speaker-notes-pdf {
+    display: none;
+}
